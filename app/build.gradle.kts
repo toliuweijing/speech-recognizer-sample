@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -16,6 +18,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndkVersion = "25.2.9519653"
+        ndk {
+//            abiFilters = 'armeabi-v7a', 'arm64-v8a', 'x86_64', 'x86'
+        }
     }
 
     buildTypes {
@@ -40,7 +47,9 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":models"))
+    implementation("net.java.dev.jna:jna:5.13.0@aar")
+    implementation("com.alphacephei:vosk-android:0.3.47@aar")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
