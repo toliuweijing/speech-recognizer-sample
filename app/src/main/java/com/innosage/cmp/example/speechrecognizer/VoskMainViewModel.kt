@@ -84,7 +84,7 @@ class VoskMainViewModel(application: Application) : AndroidViewModel(application
 
     private fun initModel() {
         StorageService.unpack(
-            this.getApplication(), "model-en-us", "model",
+            this.getApplication(), "model-small-cn", "model",
             { model: Model ->
                 this.model = model
             },
