@@ -68,8 +68,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             speechRecognizer.stopListening()
         } else {
             val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                putExtra(
+                    RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                    RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+                )
                 putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US")
+                putExtra(RecognizerIntent.EXTRA_LANGUAGE, "cmn-Hans-CN")
                 putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
             }
             speechRecognizer.startListening(intent)
