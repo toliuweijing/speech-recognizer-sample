@@ -1,8 +1,6 @@
 package com.innosage.cmp.example.speechrecognizer
 
 import android.app.Application
-import android.content.Intent
-import android.speech.RecognizerIntent
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import com.innosage.cmp.example.speechrecognizer.vosk.SpeechService
@@ -15,7 +13,7 @@ import org.vosk.android.StorageService
 import java.io.IOException
 import java.lang.Exception
 
-class VoskMainViewModel(application: Application) : AndroidViewModel(application) {
+class VoskSpeechServiceViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _isListening = MutableStateFlow(false)
     val isListening: StateFlow<Boolean> = _isListening

@@ -24,15 +24,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.innosage.cmp.example.speechrecognizer.ui.theme.MyApplicationTheme
-import org.vosk.Model
-import org.vosk.android.SpeechService
-import org.vosk.android.StorageService
-import java.io.IOException
 
 class MainActivity : ComponentActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
-    private val voskViewModel: VoskMainViewModel by viewModels()
+    private val viewModel: SpeechRecognizerViewModel by viewModels()
+    private val voskViewModel: VoskSpeechServiceViewModel by viewModels()
 
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
@@ -69,8 +65,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun LiveTranscribeScreen(
-    viewModel: VoskMainViewModel,
-    viewModel2: MainViewModel,
+    viewModel: VoskSpeechServiceViewModel,
+    viewModel2: SpeechRecognizerViewModel,
     modifier: Modifier = Modifier
 ) {
     val isListening by viewModel.isListening.collectAsState()

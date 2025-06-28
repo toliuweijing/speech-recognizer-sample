@@ -6,16 +6,11 @@ import android.os.Bundle
 import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import org.vosk.Model
-import org.vosk.android.SpeechService
-import org.vosk.android.StorageService
-import java.io.IOException
 
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+class SpeechRecognizerViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _isListening = MutableStateFlow(false)
     val isListening: StateFlow<Boolean> = _isListening
@@ -27,9 +22,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val error: StateFlow<String?> = _error
 
     private val speechRecognizer: SpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(application)
-
-    private val speechService: SpeechService? = null
-    private var model: Model? = null
 
     init {
         val recognitionListener = object : RecognitionListener {
