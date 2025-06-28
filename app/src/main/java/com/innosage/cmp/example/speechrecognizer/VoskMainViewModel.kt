@@ -5,12 +5,12 @@ import android.content.Intent
 import android.speech.RecognizerIntent
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
+import com.innosage.cmp.example.speechrecognizer.vosk.SpeechService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import org.vosk.Model
 import org.vosk.Recognizer
 import org.vosk.android.RecognitionListener
-import org.vosk.android.SpeechService
 import org.vosk.android.StorageService
 import java.io.IOException
 import java.lang.Exception
