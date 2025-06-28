@@ -1,6 +1,12 @@
 # Speech Recognizer App
 
-A simple Android application that demonstrates real-time speech-to-text transcription.
+A vibe-coded sample Android application that demonstrates real-time speech-to-text transcription via SpeechRecognizer API. 
+
+![output](https://github.com/user-attachments/assets/9de2d1cf-9e96-47b5-97f8-ccab65fc1067)
+
+## APK
+https://github.com/toliuweijing/speech-recognizer-sample/issues/2
+
 
 ## Features
 
