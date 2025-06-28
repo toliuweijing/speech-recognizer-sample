@@ -2,7 +2,9 @@
 
 A vibe-coded sample Android application that demonstrates real-time speech-to-text transcription via SpeechRecognizer API. 
 
-![output](https://github.com/user-attachments/assets/9de2d1cf-9e96-47b5-97f8-ccab65fc1067)
+
+
+<img src="https://github.com/user-attachments/assets/badb64cb-5e9e-4936-ba05-fc4717f9409f" height="500"/>
 
 ## APK
 https://github.com/toliuweijing/speech-recognizer-sample/issues/2
